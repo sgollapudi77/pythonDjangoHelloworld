@@ -60,7 +60,7 @@ jobs:
           path: .
           
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2.2.10
+        uses: azure/webapps-deploy@v2.2.9
         id: deploy-to-webapp
         with:
           app-name: 'linuxTestingApp'
