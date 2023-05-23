@@ -39,7 +39,10 @@ jobs:
           path: |
             . 
             !venv/
-
+            
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -60,4 +63,7 @@ jobs:
         with:
           app-name: 'linuxTestingApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BAD30764D7B644AAAFFC565945B2C59E }}
+          
+      - name: logout
+        run: |
+          az logout
