@@ -16,3 +16,5 @@ For deployment to production, create an app setting, `SECRET_KEY`. Use this comm
 ```shell
 python -c 'import secrets; print(secrets.token_hex())'
 ```
+
+Trigger new build
