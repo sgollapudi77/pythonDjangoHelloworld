@@ -66,6 +66,7 @@ jobs:
         with:
           app-name: 'linuxTestingApp'
           slot-name: 'Production'
+          restart: true
           
       - name: logout
         run: |
